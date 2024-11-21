@@ -110,7 +110,7 @@ export default function Home() {
               {/* Thumbnail */}
               <div
                 className="bg-gray-300 rounded w-full h-[180px] flex items-center justify-center"
-                style={{ backgroundImage: "url('/images/admin-dashboard-ss.jpg')", backgroundSize: 'cover' }}
+                style={{ backgroundImage: "url('images/admin-dashboard-ss.jpg')", backgroundSize: 'cover' }}
               >
                 <p className="text-black text-lg font-bold">
                   <i className="fa fa-play"></i>
