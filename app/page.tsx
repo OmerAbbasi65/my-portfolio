@@ -30,15 +30,21 @@ export default function Home() {
 
         {/* Introduction Section */}
         <header className="text-center py-10">
-          <h1 className="text-5xl font-bold mt-5 py-10 px-0 rounded-md" style={{ backgroundColor: "rgb(0, 0, 0)" }}>Hi, I’m Muhammad Omer Abbasi</h1>
+          <h1
+            className="text-3xl md:text-5xl font-bold mt-5 py-6 px-2 md:py-10 md:px-0 rounded-md"
+            style={{ backgroundColor: "rgb(0, 0, 0)" }}
+          >
+            Hi, I’m Muhammad Omer Abbasi
+          </h1>
           <p
-            className="text-lg mt-4 max-w-xl mx-auto p-5 rounded-md"
+            className="text-sm md:text-lg mt-4 max-w-full md:max-w-xl mx-auto p-3 md:p-5 rounded-md"
             style={{ backgroundColor: "rgb(0, 0, 0)" }}
           >
             A passionate full stack web developer crafting elegant and efficient web experiences
             with a strong focus on SEO.
           </p>
         </header>
+
       </div>
 
       {/* Skills Section */}
