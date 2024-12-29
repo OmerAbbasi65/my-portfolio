@@ -98,7 +98,7 @@ export default function Home() {
             <h3 className="text-xl font-bold text-center">Lab Automation</h3>
             <p className="mt-2 text-center">Lab testing web app.</p>
             <center>
-              <button className="bg-blue-500 text-white text-sm px-4 py-2 rounded-md shadow-md hover:bg-blue-600 transition duration-300">
+              {/* <button className="bg-blue-500 text-white text-sm px-4 py-2 rounded-md shadow-md hover:bg-blue-600 transition duration-300">
                 <a
                   className="font-semibold"
                   href="http://lab-automation.byethost5.com/"
@@ -107,7 +107,7 @@ export default function Home() {
                 >
                   Visit
                 </a>
-              </button>
+              </button> */}
             </center>
             <div
               className="cursor-pointer mt-2"
