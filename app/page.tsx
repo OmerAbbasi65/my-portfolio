@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import profilePic from "../public/images/profile.png"; // Add your image in the 'public' folder with this name
+import profilePic from "../public/images/boy.jpg"; // Add your image in the 'public' folder with this name
 
 
 
