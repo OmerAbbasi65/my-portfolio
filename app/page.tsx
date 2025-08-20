@@ -2,15 +2,14 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import profilePic from "../public/images/boy.jpg"; // Add your image in the 'public' folder with this name
-
-
+import profilePic from "../public/images/boy.jpg"; // Put this image in /public/images/
 
 export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
     <div className="bg-gradient-to-r from-blue-900 via-blue-800 to-blue-600 text-white pb-0">
+      {/* Hero Section */}
       <div
         style={{
           backgroundImage: "url('images/bg11.png')",
@@ -24,11 +23,11 @@ export default function Home() {
         {/* Profile Image */}
         <div className="flex justify-center mt-10">
           <div className="relative w-32 h-32 md:w-48 md:h-48 rounded-full overflow-hidden border-4 border-white shadow-lg">
-            <Image src={profilePic} alt="Profile Picture" layout="fill" objectFit="cover" />
+            <Image src={profilePic} alt="Profile Picture" fill style={{ objectFit: "cover" }} />
           </div>
         </div>
 
-        {/* Introduction Section */}
+        {/* Introduction */}
         <header className="text-center py-10">
           <h1
             className="text-3xl md:text-5xl font-bold mt-5 py-6 px-2 md:py-10 md:px-0 rounded-md"
@@ -44,21 +43,26 @@ export default function Home() {
             with a strong focus on SEO.
           </p>
         </header>
-
       </div>
 
       {/* Skills Section */}
       <section className="my-10 p-10">
         <h2 className="text-3xl font-semibold mb-6 text-center">Skills</h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-          <div className="bg-white text-black p-5 rounded shadow-md">JavaScript</div>
-          <div className="bg-white text-black p-5 rounded shadow-md">React</div>
-          <div className="bg-white text-black p-5 rounded shadow-md">Next.js</div>
-          <div className="bg-white text-black p-5 rounded shadow-md">Tailwind CSS</div>
-          <div className="bg-white text-black p-5 rounded shadow-md">PHP</div>
-          <div className="bg-white text-black p-5 rounded shadow-md">ASP.NET</div>
-          <div className="bg-white text-black p-5 rounded shadow-md">AI Prompt Engineering</div>
-          <div className="bg-white text-black p-5 rounded shadow-md">SEO</div>
+          {[
+            "JavaScript",
+            "React",
+            "Next.js",
+            "Tailwind CSS",
+            "PHP",
+            "ASP.NET",
+            "AI Prompt Engineering",
+            "SEO",
+          ].map((skill) => (
+            <div key={skill} className="bg-white text-black p-5 rounded shadow-md">
+              {skill}
+            </div>
+          ))}
         </div>
       </section>
 
@@ -73,16 +77,14 @@ export default function Home() {
               A platform where everyone can create a simple and good-looking resume.
             </p>
             <center>
-              <button className="bg-blue-500 text-white text-sm px-4 py-2 rounded-md shadow-md hover:bg-blue-600 transition duration-300">
-                <a
-                  className="font-semibold"
-                  href="https://nextjs-quick-resume.vercel.app/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Visit
-                </a>
-              </button>
+              <a
+                href="https://nextjs-quick-resume.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-blue-500 text-white text-sm px-4 py-2 rounded-md shadow-md hover:bg-blue-600 transition duration-300 font-semibold mt-3"
+              >
+                Visit
+              </a>
             </center>
             <iframe
               src="https://nextjs-quick-resume.vercel.app/"
@@ -97,18 +99,6 @@ export default function Home() {
           <div className="bg-white text-black p-5 rounded shadow-md relative">
             <h3 className="text-xl font-bold text-center">Lab Automation</h3>
             <p className="mt-2 text-center">Lab testing web app.</p>
-            <center>
-              {/* <button className="bg-blue-500 text-white text-sm px-4 py-2 rounded-md shadow-md hover:bg-blue-600 transition duration-300">
-                <a
-                  className="font-semibold"
-                  href="http://lab-automation.byethost5.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Visit
-                </a>
-              </button> */}
-            </center>
             <div
               className="cursor-pointer mt-2"
               onClick={() => setIsModalOpen(true)}
@@ -116,17 +106,18 @@ export default function Home() {
               {/* Thumbnail */}
               <div
                 className="bg-gray-300 rounded w-full h-[180px] flex items-center justify-center"
-                style={{ backgroundImage: "url('images/admin-dashboard-ss.jpg')", backgroundSize: 'cover' }}
+                style={{
+                  backgroundImage: "url('images/admin-dashboard-ss.jpg')",
+                  backgroundSize: "cover",
+                }}
               >
                 <p className="text-black text-lg font-bold">
                   <i className="fa fa-play"></i>
                 </p>
-
               </div>
             </div>
 
-
-            {/* Modal for Video */}
+            {/* Modal with Video */}
             {isModalOpen && (
               <div
                 className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50"
@@ -136,7 +127,11 @@ export default function Home() {
                   className="bg-white p-5 rounded-md shadow-lg max-w-3xl w-full"
                   onClick={(e) => e.stopPropagation()}
                 >
-                  <video controls className="w-full rounded">
+                  <video
+                    key={isModalOpen ? "open" : "closed"} // ensures reload when opened
+                    controls
+                    className="w-full rounded"
+                  >
                     <source src="/videos/lab-automation-demo.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
                   </video>
