@@ -117,7 +117,7 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Modal with Video */}
+            {/* Modal with Google Drive Video */}
             {isModalOpen && (
               <div
                 className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50"
@@ -127,14 +127,13 @@ export default function Home() {
                   className="bg-white p-5 rounded-md shadow-lg max-w-3xl w-full"
                   onClick={(e) => e.stopPropagation()}
                 >
-                  <video
-                    key={isModalOpen ? "open" : "closed"} // ensures reload when opened
-                    controls
-                    className="w-full rounded"
-                  >
-                    <source src="/videos/lab-automation-demo.mp4" type="video/mp4" />
-                    Your browser does not support the video tag.
-                  </video>
+                  <iframe
+                    src="https://drive.google.com/file/d/1nQqZ7u3x2LruEL0mnnnws7KAZicFuIqM/preview"
+                    width="100%"
+                    height="480"
+                    allow="autoplay"
+                    className="rounded"
+                  ></iframe>
                   <button
                     className="mt-4 bg-blue-500 text-white px-4 py-2 rounded-md shadow-md hover:bg-blue-600 transition duration-300"
                     onClick={() => setIsModalOpen(false)}
