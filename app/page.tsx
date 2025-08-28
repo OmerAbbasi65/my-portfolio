@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import profilePic from "../public/images/boy.jpg"; // Put this image in /public/images/
+import profilePic from "../public/images/dp.jpg"; // Put this image in /public/images/
 
 export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
