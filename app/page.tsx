@@ -144,6 +144,82 @@ export default function Home() {
               </div>
             )}
           </div>
+
+         {/* Find Yo Meal */}
+          <div className="bg-white text-black p-5 rounded shadow-md">
+            <h3 className="text-xl font-bold text-center">Find Yo Meal</h3>
+            <p className="mt-2 text-center">
+              By using this app you can find and order food from your nearest and favourite restaurants.
+            </p>
+            <center>
+              <a
+                href="https://find-yo-meal.streamlit.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-blue-500 text-white text-sm px-4 py-2 rounded-md shadow-md hover:bg-blue-600 transition duration-300 font-semibold mt-3"
+              >
+                Visit
+              </a>
+            </center>
+            
+          </div>
+
+          {/* BMI Calculator */}
+          <div className="bg-white text-black p-5 rounded shadow-md">
+            <h3 className="text-xl font-bold text-center">BMI Calculator</h3>
+            <p className="mt-2 text-center">
+              By using this app you can calculate your body mass index.
+            </p>
+            <center>
+              <a
+                href="https://bmi-calculater-by-omer-abbasi-git.streamlit.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-blue-500 text-white text-sm px-4 py-2 rounded-md shadow-md hover:bg-blue-600 transition duration-300 font-semibold mt-3"
+              >
+                Visit
+              </a>
+            </center>
+            
+          </div>
+
+          {/* Weather Checking App */}
+          <div className="bg-white text-black p-5 rounded shadow-md">
+            <h3 className="text-xl font-bold text-center">Weather Checking App</h3>
+            <p className="mt-2 text-center">
+              By using this app you can find the weather update of any city.
+            </p>
+            <center>
+              <a
+                href="https://weather-app-by-omer.streamlit.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-blue-500 text-white text-sm px-4 py-2 rounded-md shadow-md hover:bg-blue-600 transition duration-300 font-semibold mt-3"
+              >
+                Visit
+              </a>
+            </center>
+            
+          </div>
+
+           {/* Unit Converter App */}
+          <div className="bg-white text-black p-5 rounded shadow-md">
+            <h3 className="text-xl font-bold text-center">Unit Converter App</h3>
+            <p className="mt-2 text-center">
+              By using this app you can make conversions of all kind of units.
+            </p>
+            <center>
+              <a
+                href="https://unit-converter-appgit-by-omer-abbasi.streamlit.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-blue-500 text-white text-sm px-4 py-2 rounded-md shadow-md hover:bg-blue-600 transition duration-300 font-semibold mt-3"
+              >
+                Visit
+              </a>
+            </center>
+            
+          </div>
         </div>
       </section>
 
