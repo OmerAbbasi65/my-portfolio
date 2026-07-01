@@ -146,7 +146,7 @@ export default function Home() {
           </div>
 
          {/* Find Yo Meal */}
-          <div className="bg-white text-black p-5 rounded shadow-md">
+          {/* <div className="bg-white text-black p-5 rounded shadow-md">
             <h3 className="text-xl font-bold text-center">Find Yo Meal</h3>
             <p className="mt-2 text-center">
               By using this app you can find and order food from your nearest and favourite restaurants.
@@ -162,7 +162,7 @@ export default function Home() {
               </a>
             </center>
             
-          </div>
+          </div> */}
 
           {/* BMI Calculator */}
           <div className="bg-white text-black p-5 rounded shadow-md">
