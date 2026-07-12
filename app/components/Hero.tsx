@@ -4,7 +4,6 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
 import FloatingShapes from "./FloatingShapes";
-import ScrollIndicator from "./ScrollIndicator";
 
 export default function Hero() {
   return (
@@ -20,7 +19,7 @@ export default function Hero() {
           transition={{ duration: 1 }}
         >
           <Image
-            src="/images/dp.jpg"
+            src="/my-portfolio/images/dp.jpg"
             alt="Muhammad Omer Abbasi"
             width={220}
             height={220}
@@ -98,7 +97,7 @@ export default function Hero() {
         </motion.div>
       </div>
 
-      {/* <ScrollIndicator /> */}
+    
 
     </section>
   );
