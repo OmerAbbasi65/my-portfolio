@@ -12,7 +12,7 @@ export default function Home() {
       {/* Hero Section */}
       <div
         style={{
-          backgroundImage: "url('images/bg11.png')",
+          // backgroundImage: "url('images/bg11.png')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           height: "100%",
